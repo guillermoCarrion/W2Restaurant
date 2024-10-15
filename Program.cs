@@ -27,7 +27,10 @@ combo.MostrarDetalles();
 pedido.AnadirProductos(combo,3);
 pedido.MostrarPedido();
 var totalConCantidad = pedido.CalcularTotal();
-Console.WriteLine($"Total pedido: {totalConCantidad}");
+var TotalConIva = pedido.CalcularImpuestos();
+var TotalConDescuento = pedido.AplicarDescuento(0.1);
+Console.WriteLine($"Total pedido: {totalConCantidad}   Total Pedido con Iva: {TotalConIva}    Total con descuento{TotalConDescuento}");
+
 
 
 

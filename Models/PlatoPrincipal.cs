@@ -4,7 +4,7 @@ public class PlatoPrincipal : Producto {
 
     public string Ingredientes {get;set;}
 
-public PlatoPrincipal(string nombre, double precio, string ingredientes): base(nombre, precio) {
+    public PlatoPrincipal(string nombre, double precio, string ingredientes): base(nombre, precio) {
    Ingredientes = ingredientes;
 }
 

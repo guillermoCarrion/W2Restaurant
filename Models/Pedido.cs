@@ -14,6 +14,12 @@ public void AnadirProductos(Producto producto, int cantidad = 1) {
     Console.WriteLine($"Producto añadido: {producto.Nombre}");
 }
 
+public void EliminarProductos(Producto producto, int cantidad = 1) {
+    productos.Remove((producto,cantidad));
+    Console.WriteLine($"Producto añadido: {producto.Nombre}");
+}
+
+
 public void MostrarPedido() {
     Console.WriteLine("\n-------Pedido------");
     foreach (var producto in productos) {
@@ -28,6 +34,15 @@ public double CalcularTotal() {
         total += producto.Item1.Precio * producto.Item2;
     }
     return total;
+}
+
+public double CalcularImpuestos(){
+    var iva = 0.21;
+    return CalcularTotal() * (1+iva);
+}
+
+public double AplicarDescuento(double descuento){
+    return CalcularTotal() * (1-descuento);
 }
 
 }
