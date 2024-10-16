@@ -1,6 +1,8 @@
 ﻿
 using Models;
 
+
+/*
 var plato = new PlatoPrincipal("Plato combinado", 12.50, "Pollo, patatas, tomate");
 plato.MostrarDetalles();
 
@@ -30,9 +32,9 @@ var totalConCantidad = pedido.CalcularTotal();
 var TotalConIva = pedido.CalcularImpuestos();
 var TotalConDescuento = pedido.AplicarDescuento(0.1);
 Console.WriteLine($"Total pedido: {totalConCantidad}   Total Pedido con Iva: {TotalConIva}    Total con descuento{TotalConDescuento}");
+*/
 
 
 
-
-//var menuApp = new MenuApp();
-//menuApp.MostrarMenu();
+var menuApp = new MenuApp();
+menuApp.MostrarMenu();

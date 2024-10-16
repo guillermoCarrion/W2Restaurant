@@ -20,7 +20,8 @@ class MenuApp
             Console.WriteLine("2. Añadir Bebida");
             Console.WriteLine("3. Añadir Postre");
             Console.WriteLine("4. Mostrar Pedido");
-            Console.WriteLine("5. Calcular Total y Salir");
+            Console.WriteLine("5. Eliminar Producto");
+            Console.WriteLine("6. Calcular Total y Salir");
             Console.WriteLine("Selecciona una opción:");
 
             if (!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion > 5)
@@ -43,7 +44,12 @@ class MenuApp
                 case 4:
                     pedido.MostrarPedido();
                     break;
+                    /*
                 case 5:
+                    pedido.EliminarProductos();
+                    break;
+                    */
+                case 6:
                     double total = pedido.CalcularTotal();
                     Console.WriteLine($"\nTotal a pagar: {total:C}");
                     break;
@@ -52,7 +58,7 @@ class MenuApp
                     break;
             }
 
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 
 
