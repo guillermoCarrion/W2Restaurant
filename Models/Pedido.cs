@@ -10,9 +10,14 @@ private List<(Producto, int)> productos; //tupla de Producto (item1) y cantidad 
 public double Descuento {get; set;} = 0;
 public double Impuesto {get; set;} = 0.21;
 
+public DateTime FechaPedido {get; set;}
+
+
+
 
 public Pedido() {
     productos = new List<(Producto,int)>();
+    FechaPedido = DateTime.Now;
 }
 
 public void AnadirProductos(Producto producto, int cantidad = 1) {
@@ -28,6 +33,14 @@ public void EliminarProductos(Producto producto, int cantidad = 1) {
 
 public void MostrarPedido() {
     Console.WriteLine("\n-------Pedido------");
+    
+    var fechaPedidoString = "22/10/24 23:12";
+    var fechaPedidoStringConverted = Convert.ToDateTime(fechaPedidoString);
+    
+    
+    var fechaPedido = FechaPedido;
+    var fechaPedidoSinSegundos = FechaPedido.ToString("dd/MM/yy HH:mm");
+    Console.WriteLine ($"\n----({fechaPedido})----");
     foreach (var producto in productos) {
         producto.Item1.MostrarDetalles();
         Console.WriteLine($"Cantidad: {producto.Item2}");
