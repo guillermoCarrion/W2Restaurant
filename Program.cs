@@ -2,7 +2,7 @@
 using Models;
 
 
-/*
+
 var plato = new PlatoPrincipal("Plato combinado", 12.50, "Pollo, patatas, tomate");
 plato.MostrarDetalles();
 
@@ -29,12 +29,12 @@ combo.MostrarDetalles();
 pedido.AnadirProductos(combo,3);
 pedido.MostrarPedido();
 var totalConCantidad = pedido.CalcularTotal();
-var TotalConIva = pedido.CalcularImpuestos();
-var TotalConDescuento = pedido.AplicarDescuento(0.1);
-Console.WriteLine($"Total pedido: {totalConCantidad}   Total Pedido con Iva: {TotalConIva}    Total con descuento{TotalConDescuento}");
-*/
 
+pedido.GuardarPedido("pedidos.txt");
 
+var pedidoCargado = pedido;
+pedidoCargado.CargarPedido("pedidos.txt");
+pedidoCargado.MostrarPedido();
 
 var menuApp = new MenuApp();
 menuApp.MostrarMenu();
