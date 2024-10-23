@@ -2,7 +2,7 @@
 using Models;
 
 
-
+/*
 var plato = new PlatoPrincipal("Plato combinado", 12.50, "Pollo, patatas, tomate");
 plato.MostrarDetalles();
 
@@ -35,6 +35,6 @@ pedido.GuardarPedido("pedidos.txt");
 var pedidoCargado = pedido;
 pedidoCargado.CargarPedido("pedidos.txt");
 pedidoCargado.MostrarPedido();
-
+*/
 var menuApp = new MenuApp();
 menuApp.MostrarMenu();

@@ -10,7 +10,7 @@ private List<(Producto, int)> productos; //tupla de Producto (item1) y cantidad 
 public double Descuento {get; set;} = 0;
 public double Impuesto {get; set;} = 0.21;
 
-public DateTime FechaPedido {get; set;}
+public DateTime FechaPedido {get; private set;}
 
 
 
@@ -36,7 +36,7 @@ public void MostrarPedido() {
     
     var fechaPedidoString = "22/10/24 23:12";
     var fechaPedidoStringConverted = Convert.ToDateTime(fechaPedidoString);
-    
+
     
     var fechaPedido = FechaPedido;
     var fechaPedidoSinSegundos = FechaPedido.ToString("dd/MM/yy HH:mm");

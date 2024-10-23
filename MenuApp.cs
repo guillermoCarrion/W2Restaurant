@@ -24,7 +24,7 @@ class MenuApp
             Console.WriteLine("6. Calcular Total y Salir");
             Console.WriteLine("Selecciona una opción:");
 
-            if (!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion > 5)
+            if (!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion > 6)
             {
                 Console.WriteLine("Error: Por favor selecciona una opción válida (1-5).");
                 continue;
@@ -51,6 +51,7 @@ class MenuApp
                     */
                 case 6:
                     double total = pedido.CalcularTotal();
+                    pedido.GuardarPedido("pedidos.txt");
                     Console.WriteLine($"\nTotal a pagar: {total:C}");
                     break;
                 default:
